@@ -1,6 +1,7 @@
+--22.	 All Mountain Peaks
 SELECT PeakName FROM Peaks 
 	ORDER BY PeakName
-
+--23.	 Biggest Countries by Population
 SELECT TOP 30 CountryName,Population FROM Countries
 	WHERE ContinentCode = 
 	(SELECT ContinentCode FROM Continents WHERE ContinentName = 'Europe')
@@ -10,7 +11,7 @@ SELECT * FROM Countries
 	WHERE ContinentCode = 
 	(SELECT ContinentCode FROM Continents WHERE ContinentName = 'Europe')
 
-
+--24.	 *Countries and Currency (Euro / Not Euro)
 SELECT CountryName,
 	   CountryCode,
 	   CASE WHEN CurrencyCode = 'EUR' THEN 'Euro'
