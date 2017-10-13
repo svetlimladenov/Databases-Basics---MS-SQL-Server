@@ -57,3 +57,19 @@ WHERE e.DepartmentID IN
 (SELECT d.DepartmentID 
   FROM Departments AS d
  WHERE d.Name = 'Finance' OR d.Name = 'Sales')
+
+SELECT MIN(AvarageSalary) FROM
+(SELECT DepartmentID,
+        AVG(Salary) AS AvarageSalary
+   FROM Employees
+GROUP BY DepartmentID) AS MinAvg
+
+WITH CTE_EmpoyeeInfo 
+	(FirstName,LastName,Salary) 
+AS
+(
+    SELECT FirstName,LastName,Salary FROM Employees
+)
+
+SELECT * FROM CTE_EmpoyeeInfo
+
