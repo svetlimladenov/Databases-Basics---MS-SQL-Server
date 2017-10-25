@@ -1,0 +1,8 @@
+FirstName|LastName|Salary
+|Ivan|Ivanov|2500
+|Maria|Georgieva|2600
+|Gosho|Ivanov|2200
+|Ivan|Georgiev|1500
+|Yordan|Georgiev|1200
+|Merry|Petrova|2700
+|Ivaylo|Hristov|1500
